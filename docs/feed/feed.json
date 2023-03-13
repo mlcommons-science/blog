@@ -1,0 +1,22 @@
+{
+	"version": "https://jsonfeed.org/version/1.1",
+	"title": "MLCommons Science",
+	"language": "en",
+	"home_page_url": "https://mlcommons-science.netlify.app/",
+	"feed_url": "https://mlcommons-science.netlify.app/feed/feed.json",
+	"description": "The MLCommons Science Blog.",
+	"author": {
+		"name": "MLCommons",
+		"url": "https://github.com/mlcommons/science"
+	},
+	"items": [
+		{
+			"id": "https://mlcommons-science.netlify.app/blog/cloudmask-1/",
+			"url": "https://mlcommons-science.netlify.app/blog/cloudmask-1/",
+			"title": "Cloudmask improvements",
+			"content_html": "<p>This is a test message</p>\n",
+			"date_published": "2023-03-13T00:00:00Z"
+		}
+		
+	]
+}

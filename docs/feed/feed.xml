@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>MLCommons Science</title>
+	<subtitle>The MLCommons Science Blog.</subtitle>
+	<link href="https://mlcommons-science.netlify.app/feed/feed.xml" rel="self"/>
+	<link href="https://mlcommons-science.netlify.app/"/>
+	<updated>2023-03-13T00:00:00Z</updated>
+	<id>https://mlcommons-science.netlify.app/</id>
+	<author>
+		<name>MLCommons</name>
+		<email>laszewski@gmail.com</email>
+	</author>
+	
+	<entry>
+		<title>Cloudmask improvements</title>
+		<link href="https://mlcommons-science.netlify.app/blog/cloudmask-1/"/>
+		<updated>2023-03-13T00:00:00Z</updated>
+		<id>https://mlcommons-science.netlify.app/blog/cloudmask-1/</id>
+		<content type="html">&lt;p&gt;This is a test message&lt;/p&gt;
+</content>
+	</entry>
+</feed>
