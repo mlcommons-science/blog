@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Cloudmask improvements</title>
+		<title>Cloudmask Improvements for Parallel Executions</title>
 		<meta name="description" content="Improvements towards parallel cloudmask.">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="MLCommons Science">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="MLCommons Science">
@@ -465,7 +465,7 @@ h2 + .header-anchor {
 
 		<main id="skip">
 			
-<h1>Cloudmask improvements</h1>
+<h1>Cloudmask Improvements for Parallel Executions</h1>
 
 <ul class="post-metadata">
 	<li><time datetime="2023-03-13">13 March 2023</time></li>
@@ -473,7 +473,22 @@ h2 + .header-anchor {
 	<li><a href="/tags/science/" class="post-tag">science</a></li>
 </ul>
 
-<p>This is a test message</p>
+<p>The original cloudmask code contains a feature to save the training model into
+a file that is later used for inference. However at the current time
+the configuration file and the associated code save this configuration
+file into a single location. If run in parallele the model would be
+overwritten among parallel runs. To allow parallel execution of
+cloudmask a mechanism to run the code on a permutation of different
+parameters is used. Fort this we can reuse <code>cloudmesh-sbatch</code> which
+allows the creation of a number of subdirectories that contain a
+modified congig.yaml file, as well as a custom creates slurm
+script. We also have modified the original python code to take in
+consideration the new paramaters in the YAML file.
+This framework can be adapted to various applications and HPC
+computers on which we execute cloudmask.</p>
+<p>For more information, please contact Gregor von Laszewski
+<a href="mailto:laszewski@gmail.com">laszewski@gmail.com</a></p>
+<p>Code for cloudmesh-sbatch is available on <a href="https://pypi.org/project/cloudmesh-sbatch/">GitHub and PyPi</a>.</p>
 
 
 		</main>
