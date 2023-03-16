@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Cloudmask Improvements for Parallel Executions</title>
-		<meta name="description" content="Improvements towards parallel cloudmask.">
+		<title>Improving the Earthquake Nowcasting Code</title>
+		<meta name="description" content="Improving the Earthquake Nowcasting Code">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="MLCommons Science">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="MLCommons Science">
 		
@@ -465,39 +465,72 @@ h2 + .header-anchor {
 
 		<main id="skip">
 			
-<h1>Cloudmask Improvements for Parallel Executions</h1>
+<h1>Improving the Earthquake Nowcasting Code</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2023-03-13">13 March 2023</time></li>
-	<li><a href="/tags/cloudmask/" class="post-tag">cloudmask</a>, </li>
+	<li><time datetime="2023-03-16">16 March 2023</time></li>
+	<li><a href="/tags/erathquake/" class="post-tag">erathquake</a>, </li>
 	<li><a href="/tags/science/" class="post-tag">science</a></li>
 </ul>
 
-<p>The original cloudmask code contains a feature to save the training
-model into a file that is later used for inference. However, at the
-current time, the configuration file and the associated code save this
-configuration file in a single location. If run in parallel the model
-would be overwritten among parallel runs. To allow parallel execution
-of cloudmask a mechanism to run the code on a permutation of different
-parameters is used. For this we can reuse <code>cloudmesh-sbatch</code> which
-allows the creation of a number of subdirectories that contain a
-modified <code>config.yaml</code> file, as well as a custom-created batch
-script. We also have modified the original python code to take into
-consideration the new parameters in the YAML file.  This framework can
-be adapted to various applications and HPC computers on which we
-execute cloudmask.</p>
-<p>For more information, please contact Gregor von Laszewski
-<a href="mailto:laszewski@gmail.com">laszewski@gmail.com</a></p>
-<p>Code for cloudmesh-sbatch is available on
-<a href="https://pypi.org/project/cloudmesh-sbatch/">GitHub and PyPi</a>.</p>
+<h1 id="improving-the-earthquake-nowcasting-code" tabindex="-1">Improving the Earthquake Nowcasting Code <a class="header-anchor" href="#improving-the-earthquake-nowcasting-code">#</a></h1>
+<p><em>Comments by Geoffrey Fox, 15 March 2023</em></p>
+<p>The Earthquake forecasting code has been improved following the recent
+studies of</p>
+<ul>
+<li>
+<p>&quot;Does the Catalog of California Earthquakes, With Aftershocks
+Included, Contain Information About Future Large Earthquakes?&quot;  John
+B. Rundle, Andrea Donnellan, Geoffrey Fox, Lisa Grant Ludwig, James
+Crutchfield, 10 February 2023
+<a href="https://doi.org/10.1029/2022EA002521">https://doi.org/10.1029/2022EA002521</a></p>
+</li>
+<li>
+<p>&quot;Optimizing Earthquake Nowcasting With Machine Learning: The Role of
+Strain Hardening in the Earthquake Cycle,&quot; John B. Rundle, Joe
+Yazbeck, Andrea Donnellan, Geoffrey Fox, Lisa Grant Ludwig, Michael
+Heflin, James Crutchfield, 17 October 2022
+<a href="https://doi.org/10.1029/2022EA002343">https://doi.org/10.1029/2022EA002343</a></p>
+</li>
+</ul>
+<p>These two papers identify that the occurrence rate of medium earthquakes
+(m <code>&gt;</code> 3.29) represented by smoothing in a time series of their number
+reveals the hidden variables controlling large earthquakes with
+magnitude <code>&gt;=</code> 6.75. In particular, the rate of these medium earthquakes
+decreases before a large quake; due to aftershocks, their number peaks
+after a large earthquake.</p>
+<p>We added this observable with 9 different smoothing methods to the
+existing earthquake nowcasting code with the simplest LSTM model. This
+gave for the earthquake activity in the next 4 years.</p>
+<ul>
+<li>
+<p>Normalized Nash-Sutcliffe Efficiency NNSE with 9 &quot;Physics Suggested&quot;
+Data Training 0.948 Validation 0.866</p>
+</li>
+<li>
+<p>Normalized Nash-Sutcliffe Efficiency NNSE with Original code as in
+MLCommons Training 0.928 Validation 0.796</p>
+</li>
+</ul>
+<p>Which is a significant improvement. We used the Morris method to find
+which physics observable was most significant and ran with just this
+getting slightly better.</p>
+<ul>
+<li>Normalized Nash-Sutcliffe Efficiency NNSE with Best &quot;Physics
+Suggested&quot; Data Training 0.956 Validation 0.866</li>
+</ul>
+<p>The time-dependent four-year predictions for the last fit is</p>
+<p><img src="image1.png" alt=""></p>
+<p>While the original code gives</p>
+<p><img src="image2.png" alt=""></p>
 
-<ul class="links-nextprev"><li>Previous: <a href="/blog/goal-1/">Revised Goal Statement</a></li><li>Next: <a href="/blog/earthquake-1/">Improving the Earthquake Nowcasting Code</a></li>
+<ul class="links-nextprev"><li>Previous: <a href="/blog/cloudmask-1/">Cloudmask Improvements for Parallel Executions</a></li>
 </ul>
 
 		</main>
 
 		<footer></footer>
 
-		<!-- Current page: /blog/cloudmask-1/ -->
+		<!-- Current page: /blog/earthquake-1/ -->
 	</body>
 </html>

@@ -4,12 +4,70 @@
 	<subtitle>The MLCommons Science Blog.</subtitle>
 	<link href="https://mlcommons-science.netlify.app/feed/feed.xml" rel="self"/>
 	<link href="https://mlcommons-science.netlify.app/"/>
-	<updated>2023-03-13T00:00:00Z</updated>
+	<updated>2023-03-16T00:00:00Z</updated>
 	<id>https://mlcommons-science.netlify.app/</id>
 	<author>
 		<name>MLCommons</name>
 		<email>laszewski@gmail.com</email>
 	</author>
+	
+	<entry>
+		<title>Improving the Earthquake Nowcasting Code</title>
+		<link href="https://mlcommons-science.netlify.app/blog/earthquake-1/"/>
+		<updated>2023-03-16T00:00:00Z</updated>
+		<id>https://mlcommons-science.netlify.app/blog/earthquake-1/</id>
+		<content type="html">&lt;h1 id=&quot;improving-the-earthquake-nowcasting-code&quot; tabindex=&quot;-1&quot;&gt;Improving the Earthquake Nowcasting Code &lt;a class=&quot;header-anchor&quot; href=&quot;https://mlcommons-science.netlify.app/blog/earthquake-1/&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Comments by Geoffrey Fox, 15 March 2023&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The Earthquake forecasting code has been improved following the recent
+studies of&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;quot;Does the Catalog of California Earthquakes, With Aftershocks
+Included, Contain Information About Future Large Earthquakes?&amp;quot;  John
+B. Rundle, Andrea Donnellan, Geoffrey Fox, Lisa Grant Ludwig, James
+Crutchfield, 10 February 2023
+&lt;a href=&quot;https://doi.org/10.1029/2022EA002521&quot;&gt;https://doi.org/10.1029/2022EA002521&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;quot;Optimizing Earthquake Nowcasting With Machine Learning: The Role of
+Strain Hardening in the Earthquake Cycle,&amp;quot; John B. Rundle, Joe
+Yazbeck, Andrea Donnellan, Geoffrey Fox, Lisa Grant Ludwig, Michael
+Heflin, James Crutchfield, 17 October 2022
+&lt;a href=&quot;https://doi.org/10.1029/2022EA002343&quot;&gt;https://doi.org/10.1029/2022EA002343&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These two papers identify that the occurrence rate of medium earthquakes
+(m &lt;code&gt;&amp;gt;&lt;/code&gt; 3.29) represented by smoothing in a time series of their number
+reveals the hidden variables controlling large earthquakes with
+magnitude &lt;code&gt;&amp;gt;=&lt;/code&gt; 6.75. In particular, the rate of these medium earthquakes
+decreases before a large quake; due to aftershocks, their number peaks
+after a large earthquake.&lt;/p&gt;
+&lt;p&gt;We added this observable with 9 different smoothing methods to the
+existing earthquake nowcasting code with the simplest LSTM model. This
+gave for the earthquake activity in the next 4 years.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Normalized Nash-Sutcliffe Efficiency NNSE with 9 &amp;quot;Physics Suggested&amp;quot;
+Data Training 0.948 Validation 0.866&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Normalized Nash-Sutcliffe Efficiency NNSE with Original code as in
+MLCommons Training 0.928 Validation 0.796&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Which is a significant improvement. We used the Morris method to find
+which physics observable was most significant and ran with just this
+getting slightly better.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Normalized Nash-Sutcliffe Efficiency NNSE with Best &amp;quot;Physics
+Suggested&amp;quot; Data Training 0.956 Validation 0.866&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The time-dependent four-year predictions for the last fit is&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mlcommons-science.netlify.app/blog/earthquake-1/image1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;While the original code gives&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mlcommons-science.netlify.app/blog/earthquake-1/image2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>Cloudmask Improvements for Parallel Executions</title>
