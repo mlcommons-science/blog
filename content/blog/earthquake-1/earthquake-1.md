@@ -53,9 +53,9 @@ getting slightly better.
 
 The time-dependent four-year predictions for the last fit is
 
-![](/image1.png)
+![](https://github.com/mlcommons-science/mlcommons-science.github.io/raw/main/content/blog/earthquake-1/image1.png)
 
 While the original code gives
 
-![](/image2.png)
+![](https://github.com/mlcommons-science/mlcommons-science.github.io/raw/main/content/blog/earthquake-1/image2.png)
 
