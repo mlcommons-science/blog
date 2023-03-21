@@ -4,7 +4,7 @@ description: Improving the Earthquake Nowcasting Code
 date: 2023-03-16
 author: G. C. Fox
 tags:
-  - erathquake
+  - earthquake
   - science
 ---
 
