@@ -30,6 +30,10 @@ The following descriptions and code to scientific benchmarks are avialable at:
 * [Stemdl](https://github.com/mlcommons/science/tree/main/benchmarks/stemdl)
 * [Uno](https://github.com/mlcommons/science/tree/main/benchmarks/uno)
 
+The tags for the news are at
+
+* <https://mlcommons-science.github.io/tags/>
+
 ## Development versions 
 
 Development versions of the codes prior to upload to the mlcommons directory are available as follows:
