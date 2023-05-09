@@ -12,42 +12,47 @@
 	</url>
 	
 	<url>
+		<loc>https://mlcommons-science.netlify.app/blog/earthquake-1/</loc>
+		<lastmod>2023-03-16</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://mlcommons-science.netlify.app/blog/science-about/</loc>
+		<lastmod>2023-05-03</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://mlcommons-science.netlify.app/about/</loc>
-		<lastmod>2023-03-13</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://mlcommons-science.netlify.app/</loc>
-		<lastmod>2023-03-13</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://mlcommons-science.netlify.app/tags/</loc>
-		<lastmod>2023-03-13</lastmod>
+		<lastmod>2023-05-09</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://mlcommons-science.netlify.app/blog/</loc>
-		<lastmod>2023-03-13</lastmod>
+		<lastmod>2023-05-09</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://mlcommons-science.netlify.app/</loc>
+		<lastmod>2023-05-09</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://mlcommons-science.netlify.app/tags/</loc>
+		<lastmod>2023-05-09</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://mlcommons-science.netlify.app/tags/science/</loc>
-		<lastmod>2023-03-13</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://mlcommons-science.netlify.app/tags/cloudmask/</loc>
-		<lastmod>2023-03-13</lastmod>
+		<lastmod>2023-05-09</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://mlcommons-science.netlify.app/tags/earthquake/</loc>
-		<lastmod>2023-03-13</lastmod>
+		<lastmod>2023-05-09</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://mlcommons-science.netlify.app/blog/earthquake-1/</loc>
-		<lastmod>2023-03-16</lastmod>
+		<loc>https://mlcommons-science.netlify.app/tags/cloudmask/</loc>
+		<lastmod>2023-05-09</lastmod>
 	</url>
 </urlset>
