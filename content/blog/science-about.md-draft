@@ -19,7 +19,7 @@ a series of 4 open source benchmarks. As a new addition to the
 MLCommons suite of benchmarks, these tools are aimed at domain
 scientists, machine learning experts, and students. The goal of
 MLCommons Science GitHub is to uncover and gather novel Machine
-Learning (ML) solutions tol improve scientific discovery by improving
+Learning (ML) solutions to improve scientific discovery by improving
 accuracy on critical problems. Each benchmark includes open datasets,
 and reference models with algorithms and software. These rigorously
 documented benchmarks will also be used as tutorials and courses and
